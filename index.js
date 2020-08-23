@@ -21,8 +21,8 @@ const readMeQuestions = () => {
 },
 {
     type: "checkbox",
-    message: "Select what you would like to include in your Table of Contents:",
     name: "tableOfContents",
+    message: "Select what you would like to include in your Table of Contents:",
     choices: [
         "Project Title",
         "Description",
@@ -73,7 +73,7 @@ const readMeQuestions = () => {
 },
 {
     type: "input",
-    name: "username",
+    name: "gitHubUsername",
     message: "Please enter your GitHub username:"
 }
 ]);
