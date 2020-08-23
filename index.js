@@ -6,7 +6,7 @@ const axios = require("axios");
 const generateReadMe = require("./utils/generateMarkdown.js");
 const writeFileAsync = util.promisify(fs.writeFile);
 
-// array of questions for user
+//Array of questions for user
 const readMeQuestions = () => {
     return inquirer.prompt([
 {
@@ -42,7 +42,7 @@ const readMeQuestions = () => {
 {
     type: "input",
     name: "usage",
-    message: "What is the project usage for?",
+    message: "Enter instructions with examples for usage:",
 },
 {
     type: "list",
@@ -71,17 +71,24 @@ const readMeQuestions = () => {
     name: "questions",
     message: "What do I do if there is an issue?",
 },
+{
+    type: "input",
+    name: "username",
+    message: "Please enter your GitHub username:"
+}
 ]);
 }
 
-// function to write README file
-function writeToFile(fileName, data) {
+//Function to initialize program and then write the ReadMe File
+const init= async () => {
+    try{
+        const answers = await readMeQuestions();
+        const ReadMe = generateReadMe(answers);
+        await writeFileAsync("ReadMe.md", ReadMe)
+        console.log("You ReadMe has been generated.")
+    } catch (error) {
+        console.log (err)
+    }
 }
-
-// function to initialize program
-function init() {
-
-}
-
 // function call to initialize program
 init();
