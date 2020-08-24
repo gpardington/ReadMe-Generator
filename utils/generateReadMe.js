@@ -2,9 +2,6 @@
 function generateReadMe(answers) {
   return `
   
-  # ReadMe-Generator
-  Using Node.js, generate a ReadMe.md file using the answers inputed by the user.
-
   ${answers.title}
 
   ## Description
@@ -35,7 +32,7 @@ function generateReadMe(answers) {
   ${answers.gitHubUsername}
 
   ### Badges
-  ![npm](https://img.shields.io/static/v1?label=license&message=${license}&color=blue)
+  ![npm](https://img.shields.io/static/v1?label=license&message=${answers.license}&color=blue)
 
   Copyright 2020 &copy;
   `;

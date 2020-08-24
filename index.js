@@ -25,13 +25,13 @@ const readMeQuestions = () => {
     message: "Select what you would like to include in your Table of Contents:",
     choices: [
         "Project Title",
-        "Description",
-        "Installation",
-        "Usage",
-        "License",
-        "Contributing",
-        "Tests",
-        "Questions"
+        " Description",
+        " Installation",
+        " Usage",
+        " License",
+        " Contributing",
+        " Tests",
+        " Questions"
     ]
 },
 {
