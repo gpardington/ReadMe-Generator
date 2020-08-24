@@ -4,11 +4,19 @@ function generateReadMe(answers) {
   
   ${answers.title}
 
-  ## Description
-  ${answers.description}
-
   ## Table of Contents
   ${answers.tableOfContents}
+  - [Description](#Description)
+  - [Installation](#Installation)
+  - [Usage](#Usage)
+  - [License](#License)
+  - [Contributors](#Contributors)
+  - [Tests](#Tests)
+  - [Questions](#Questions)
+  - [GitHub Username](#gitHubUsername)
+
+  ## Description
+  ${answers.description}
 
   ### Installation
   ${answers.installation}
