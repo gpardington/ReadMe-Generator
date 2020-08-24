@@ -1,5 +1,5 @@
 // function to generate markdown for README
-function generateMarkdown(answers) {
+function generateReadMe(answers) {
   return `
   
   # ReadMe-Generator
@@ -35,10 +35,10 @@ function generateMarkdown(answers) {
   ${answers.gitHubUsername}
 
   ### Badges
-  ![npm](https://img.shields.io/static/v1?label=license&message=${license}&color=green)
+  ![npm](https://img.shields.io/static/v1?label=license&message=${license}&color=blue)
 
   Copyright 2020 &copy;
   `;
 }
 
-module.exports = generateMarkdown;
+module.exports = generateReadMe;

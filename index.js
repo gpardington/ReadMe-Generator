@@ -3,7 +3,7 @@ const fs = require("fs");
 const util = require("util");
 const inquirer = require("inquirer");
 const axios = require("axios");
-const generateReadMe = require("./utils/generateMarkdown.js");
+const generateReadMe = require("./utils/generateReadMe.js");
 const writeFileAsync = util.promisify(fs.writeFile);
 
 //Array of questions for user
@@ -81,13 +81,13 @@ const readMeQuestions = () => {
 
 //Function to initialize program and then write the ReadMe File
 const init= async () => {
-    try{
+    try {
         const answers = await readMeQuestions();
         const ReadMe = generateReadMe(answers);
         await writeFileAsync("ReadMe.md", ReadMe)
-        console.log("You ReadMe has been generated.")
+        console.log("Your ReadMe has been generated.")
     } catch (error) {
-        console.log (err)
+        console.log (error)
     }
 }
 // function call to initialize program
